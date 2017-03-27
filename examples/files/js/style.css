@@ -1,0 +1,63 @@
+/**
+ * Filemon JS - The JavaScript File Manager
+ * 
+ * This file contains css styles for Filemon JS
+ * 
+ * Filemon JS : The JavaScript File Manager <http://mobilegb.eu/filemon>
+ * Copyright (c) 2011, Grzegorz Bednarz
+ * 
+ * Author: Grzegorz Bednarz
+ * 
+ * Filemon JS is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 or
+ * GNU Lesser General Public License version 3 as published by
+ * the Free Software Foundation.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License or GNU Lesser General Public License 
+ * for more details.
+ *
+ * You should have received a copy of the GNU General Public License and
+ * GNU Lesser General Public License along with this program; if not, 
+ * write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, 
+ * Boston, MA 02110-1301 USA
+ * 
+ * Redistributions of files must retain the above copyright notice.
+ */
+
+/* Ext.TreePanel default style overridden so empty folders will not be shown as files */
+.filemon-dir-tree .x-tree-node-leaf .x-tree-node-icon { background-image: url(extjs/resources/images/default/tree/folder.gif); }
+
+/* File items on main files view */
+.filemon-file-wrap { float: left; margin: 4px 0px 4px 4px; padding: 5px; text-align: center; border: solid 1px white; width: 80px; position: relative; }
+.filemon-file-wrap .filemon-filename { font: normal 12px tahoma, arial, helvetica, sans-serif; }
+.filemon-file-over { border: solid 1px #ABC7EC; }
+.filemon-file-selected { border: solid 1px #ABC7EC; background-color: #D7E5F5; }
+.filemon-thumb .filemon-thumb-img { width: 64px; height: 64px; }
+
+/* Top bar elements */
+.filemon-tb-up { background-image:url("images/up.png") !important; }
+.filemon-tb-new-file { background-image:url("images/new-file.png") !important; }
+.filemon-tb-new-folder { background-image:url("images/folder16.png") !important; }
+.filemon-tb-upload { background-image:url("images/upload.png") !important; }
+.filemon-tb-download { background-image:url("images/download.png") !important; }
+.filemon-tb-refresh { background-image:url("images/refresh.png") !important; }
+.filemon-tb-info { background-image:url("images/info.png") !important; }
+.filemon-tb-save { background-image:url("images/save.png") !important; }
+
+/* Context menu elements */
+.filemon-menu-remove { background-image:url("images/remove.png") !important; }
+.filemon-menu-properties { background-image:url("images/preview.png") !important; }
+.filemon-menu-rename { background-image:url("images/rename.png") !important; }
+
+/* Window icons */
+.filemon-win-error { background-image:url("images/error.png") !important; }
+.filemon-win-edit { background-image:url("images/edit.png") !important; }
+.filemon-win-properties { background-image:url("images/preview.png") !important; }
+.filemon-win-image { background-image:url("images/image16.png") !important; }
+.filemon-win-info { background-image:url("images/info.png") !important; }
+.filemon-win-default-icon { background-image:url("images/icon16.png") !important; }
+
+.x-dd-drag-proxy .filemon-multi-proxy .filemon-thumb-img { margin:1px; }

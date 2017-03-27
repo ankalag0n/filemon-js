@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Filemon JS Sample App</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="files/js/extjs/resources/css/ext-all.css" type="text/css" rel="stylesheet" />
+        <link href="files/js/style.css" type="text/css" rel="stylesheet" />
+
+        <script type="text/javascript" src="files/js/extjs/adapter/ext-base.js"></script>
+        <script type="text/javascript" src="files/js/extjs/ext-all.js"></script>
+        <script type="text/javascript" src="files/js/extjs/plugins/data-view-plugins.js"></script>
+        <script type="text/javascript" src="files/js/extjs/plugins/BrowseButton.js"></script>
+        <script type="text/javascript" src="files/js/Filemon.min.js"></script>
+        <script type="text/javascript">
+            Ext.onReady(function () {
+                document.getElementById('click-me').onclick = function () {
+                    var win = new Filemon.Window({
+                        api       : {
+                            defaultLink : 'simple.php?action=:action'
+                        },
+                        width          : 765,
+                        height         : 550,
+                        allowDirSelect : false,
+                        modal          : true,
+                        allowPreview   : true,
+                        animateTo      : 'click-me',
+                        iconsPath      : 'files/js/images/',
+                        listeners      : {
+                            filesselected : function (win, files) {
+                                win.close();
+
+                                alert("Selected files:\n" + files.join("\n"));
+                            }
+                        }
+                    });
+                    
+                    win.show();
+                };
+            });
+        </script>
+    </head>
+    <body style="padding: 10px;">
+        <h1>Filemon JS Example</h1>
+        <input type="button" value="Click me!" id="click-me" />
+        <div style="padding-top: 10px;">
+            This is example of Filemon JS dialog window. It does not use Zend Framework. Click the button above to see the example.
+            Click "show source code" to see full code of this example. PHP code is located in <i>simple.php</i> file.
+        </div>
+    </body>
+</html>

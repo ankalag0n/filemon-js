@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Filemon JS Sample App</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <link href="<?php echo $this->baseUrl('files/js/extjs/resources/css/ext-all.css'); ?>" type="text/css" rel="stylesheet" />
+        <link href="<?php echo $this->baseUrl('files/js/style.css'); ?>" type="text/css" rel="stylesheet" />
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/extjs/adapter/ext-base.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/extjs/ext-all.js'); ?>"></script>
+<!--        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/extjs/locale/ext-lang-pl.js'); ?>"></script>-->
+        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/extjs/plugins/data-view-plugins.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/extjs/plugins/BrowseButton.js'); ?>"></script>
+<!--        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/locale/filemon-locale-pl.js'); ?>"></script>-->
+        <script type="text/javascript" src="<?php echo $this->baseUrl('files/js/Filemon.min.js'); ?>"></script>
+        <script type="text/javascript">
+            Ext.onReady(function () {
+                new Filemon.Panel({
+                    api       : {
+                        defaultLink : '<?php echo $this->url(array('controller' => 'filemon'), null, true); ?>/:action'
+                    },
+                    width     : 800,
+                    height    : 500,
+                    iconsPath : '<?php echo $this->baseUrl('files/js/images/'); ?>',
+                    renderTo  : 'filemon-div'
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Filemon JS Example</h1>
+        <div id="filemon-div"></div>
+        
+        This is simple Filemon JS Panel example that uses Zend Framework on the server side. It allows full file managment. Below is the code used to generate this panel.
+        The source of this page is located in <i>application/views/index/index.phtml</i>
+<pre>
+&lt;script type="text/javascript"&gt;
+Ext.onReady(function () {
+    new Filemon.Panel({
+        api       : {
+            defaultLink : '&lt;?php echo $this->url(array('controller' => 'filemon'), null, true); ?&gt;/:action'
+        },
+        width     : 800,
+        height    : 500,
+        iconsPath : '&lt;?php echo $this->baseUrl('files/js/images/'); ?&gt;',
+        renderTo  : 'filemon-div'
+    });
+});
+&lt;/script&gt;
+&lt;div id="filemon-div"&gt;&lt;/div&gt;
+</pre>
+    </body>
+</html>
