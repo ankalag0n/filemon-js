@@ -8,16 +8,19 @@ version 1.0.0
 1. Copy files to your project and prepare server side scripts (see
    the examples and online documentation for more details)
 2. Include all required files
-  a.) CSS files
-      * ExtJS CSS style   : js/extjs/resources/css/ext-all.css
-      * Filemon CSS style : js/style.css
-  b.) JS files
-      * ExtJS adapter                   : js/extjs/adapter/ext-base.js
-      * ExtJS library                   : js/extjs/ext-all.js
-      * (optional) ExtJS language file  : js/extjs/locale/ext-lang-[your lang code].js
-      * ExtJS plugins                   : js/extjs/plugins/data-view-plugins.js and js/extjs/plugins/BrowseButton.js
-      * (optional) Filemon language file: js/locale/filemon-locale-[your lang code].js
-      * Filemon JS library              : js/Filemon.min.js
+
+      1. CSS files
+          * ExtJS CSS style   : js/extjs/resources/css/ext-all.css
+          * Filemon CSS style : js/style.css
+      
+      2. JS files
+          * ExtJS adapter                   : js/extjs/adapter/ext-base.js
+          * ExtJS library                   : js/extjs/ext-all.js
+          * (optional) ExtJS language file  : js/extjs/locale/ext-lang-[your lang code].js
+          * ExtJS plugins                   : js/extjs/plugins/data-view-plugins.js and js/extjs/plugins/BrowseButton.js
+          * (optional) Filemon language file: js/locale/filemon-locale-[your lang code].js
+          * Filemon JS library              : js/Filemon.min.js
+    
 3. Write JavaScript code that will display Filemon JS widgets (see the examples and online documentation for more details):
 
     ```javascript
