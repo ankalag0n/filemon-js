@@ -18,47 +18,45 @@ version 1.0.0
       * ExtJS plugins                   : js/extjs/plugins/data-view-plugins.js and js/extjs/plugins/BrowseButton.js
       * (optional) Filemon language file: js/locale/filemon-locale-[your lang code].js
       * Filemon JS library              : js/Filemon.min.js
-3. Write JavaScript code that will display Filemon JS widgets (see
-   the examples and online documentation for more details):
+3. Write JavaScript code that will display Filemon JS widgets (see the examples and online documentation for more details):
 
 
     <script type="text/javascript">
     // All Filemon JS widgets can be created only after entire document was loaded
     Ext.onReady(function () {
-  		// Create Filemon JS panel
-  		new Filemon.Panel({
-    		api : {
-      			defaultLink : '/link/to/server/side/scripts/:action'
-    		},
-    		width     : 800, // width and height of the panel (in pixels)
-    		height    : 500,
-    		iconsPath : 'js/images/', // path to Filemon JS image folder
-    		renderTo  : 'filemon-div' // id of the div where Filemon JS will be rendered
-  		});
+        // Create Filemon JS panel
+        new Filemon.Panel({
+            api : {
+                defaultLink : '/link/to/server/side/scripts/:action'
+            },
+            width     : 800, // width and height of the panel (in pixels)
+            height    : 500,
+            iconsPath : 'js/images/', // path to Filemon JS image folder
+            renderTo  : 'filemon-div' // id of the div where Filemon JS will be rendered
+        });
 
-  		// or display Filemon JS dialog
-  		var win = new Filemon.Window({
-    		api : {
-      			defaultLink : '/link/to/server/side/scripts/:action'
-    		},
-    		width     : 800,
-    		height    : 500,
-    		iconsPath : 'js/images/',
-    		listeners : {
-      			// This function will be called when user will select some files
-      			filesselected : function (win, files) {
-        			win.close();
-                            
-        			alert("Selected files:\n" + files.join("\n"));
-      			}
-    		}
-  		});
-                
-  		win.show(); // this will display the window
-	});
-	</script>
-
-	<div id="filemon-div"></div> <!-- dialog to render Filemon JS Panel -->
+        // or display Filemon JS dialog
+        var win = new Filemon.Window({
+            api : {
+                defaultLink : '/link/to/server/side/scripts/:action'
+            },
+            width     : 800,
+            height    : 500,
+            iconsPath : 'js/images/',
+            listeners : {
+                // This function will be called when user will select some files
+                filesselected : function (win, files) {
+                    win.close();
+                    
+                    alert("Selected files:\n" + files.join("\n"));
+                }
+            }
+        });
+          
+        win.show(); // this will display the window
+    });
+    </script>
+    <div id="filemon-div"></div> <!-- dialog to render Filemon JS Panel -->
 
 
 -------------------------------------------------------------------
