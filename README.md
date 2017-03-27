@@ -20,7 +20,7 @@ version 1.0.0
       * Filemon JS library              : js/Filemon.min.js
 3. Write JavaScript code that will display Filemon JS widgets (see the examples and online documentation for more details):
 
-
+    ```javascript
     <script type="text/javascript">
     // All Filemon JS widgets can be created only after entire document was loaded
     Ext.onReady(function () {
@@ -57,6 +57,7 @@ version 1.0.0
     });
     </script>
     <div id="filemon-div"></div> <!-- dialog to render Filemon JS Panel -->
+    ```
 
 
 -------------------------------------------------------------------
